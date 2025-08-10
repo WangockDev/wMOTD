@@ -1,0 +1,25 @@
+prefix: "&8[&b wMOTD &8]&r "
+
+ru_RU:
+  reloaded: "&aКонфигурации перезагружены."
+  no_permission: "&cУ вас нет прав."
+  player_not_found: "&cИгрок не найден."
+  preview_sent: "&aПредпросмотр MOTD отправлен %player%."
+  set_template_ok: "&aАктивный шаблон установлен: &e%template%&a."
+  stats:
+    header: "&bСтатистика wMOTD:"
+    motd_generated: "&7Сгенерировано MOTD: &e%count%"
+    cache_hits: "&7Промахов/попаданий кэша: &e%misses%/&a%hits%"
+
+en_US:
+  reloaded: "&aConfiguration reloaded."
+  no_permission: "&cYou do not have permission."
+  player_not_found: "&cPlayer not found."
+  preview_sent: "&aMOTD preview sent to %player%."
+  set_template_ok: "&aActive template set: &e%template%&a."
+  stats:
+    header: "&bwMOTD Stats:"
+    motd_generated: "&7MOTDs generated: &e%count%"
+    cache_hits: "&7Cache misses/hits: &e%misses%/&a%hits%"
+
+

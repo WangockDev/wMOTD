@@ -1,0 +1,65 @@
+# MOTD templates for wMOTD
+# Use MiniMessage when enabled in config.yml:minimessage.enabled
+# Supported placeholders: {online}, {max}, {player}, {uptime}, {votes}
+
+default:
+  lines:
+    - "<gradient:#00E0FF:#0066FF>wMOTD</gradient> <gray>|</gray> <white>Добро пожаловать</white>"
+    - "<gray>Онлайн:</gray> <green>{online}</green>/<yellow>{max}</yellow> <gray>|</gray> <white>Время работы:</white> <gold>{uptime}</gold>"
+
+good_morning:
+  lines:
+    - "<gradient:#FFA726:#FFEE58>Доброе утро</gradient> <gray>|</gray> <white>{player}</white>"
+    - "<gray>Онлайн:</gray> <green>{online}</green>/<yellow>{max}</yellow>"
+
+hello_day:
+  lines:
+    - "<gradient:#42A5F5:#26C6DA>Хорошего дня!</gradient> <white>{player}</white>"
+    - "<gray>Голоса:</gray> <aqua>{votes}</aqua>"
+
+good_evening:
+  lines:
+    - "<gradient:#AB47BC:#7E57C2>Добрый вечер</gradient> <white>{player}</white>"
+    - "<gray>Заполненность:</gray> <white>[{bar}]</white> <gold>{percent}%</gold>"
+
+night_owl:
+  lines:
+    - "<gradient:#5C6BC0:#1E88E5>Ночная смена</gradient> <white>{player}</white>"
+    - "<gray>Онлайн:</gray> <green>{online}</green>/<yellow>{max}</yellow>"
+
+vip_greeting:
+  lines:
+    - "<gradient:#FFD700:#FFA500>VIP</gradient> <gray>|</gray> <white>{player}</white>"
+    - "<gray>Спасибо за поддержку!</gray>"
+
+new_year_eve:
+  lines:
+    - "<gradient:#FF5252:#FF4081>С Новым Годом!</gradient> <white>{player}</white>"
+    - "<gray>Праздничные подарки ждут!</gray>"
+
+new_year:
+  lines:
+    - "<gradient:#00E676:#1DE9B6>Первый день года</gradient> <white>{player}</white>"
+    - "<gray>Онлайн:</gray> <green>{online}</green>/<yellow>{max}</yellow>"
+
+server_full:
+  lines:
+    - "<red>Сервер заполнен</red>"
+    - "<gray>Попробуйте позже</gray>"
+
+whitelist_on:
+  lines:
+    - "<yellow>Whitelist включен</yellow>"
+    - "<gray>Доступ ограничен</gray>"
+
+restarting:
+  lines:
+    - "<gold>Сервер перезапускается</gold>"
+    - "<gray>Скоро вернёмся</gray>"
+
+secret:
+  lines:
+    - "<gradient:#FF00CC:#333399>Секретный MOTD</gradient>"
+    - "<hover:show_text:'<gray>Вы нашли пасхалку!</gray>'><white>Тсс...</white></hover>"
+
+

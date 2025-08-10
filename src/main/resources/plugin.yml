@@ -1,0 +1,45 @@
+name: wMOTD
+main: io.wangock.wmotd.Main
+version: 1.0.0
+api-version: '1.21'
+author: Wangock
+website: https://example.com/wmotd
+description: Advanced MOTD plugin with MiniMessage, schedules, personalization, and icon animations.
+
+softdepend:
+  - PlaceholderAPI
+
+libraries:
+  # Shade is used, but Paper can also download libs if needed
+  # Keeping empty here because we shade MiniMessage and Gson
+
+commands:
+  wmotd:
+    description: wMOTD administration command
+    usage: /wmotd <reload|preview|set|stats>
+    permission: wmotd.admin
+    aliases: [wm]
+
+permissions:
+  wmotd.admin:
+    description: Allows access to all wMOTD admin commands
+    default: op
+    children:
+      wmotd.admin.reload: true
+      wmotd.admin.preview: true
+      wmotd.admin.set: true
+      wmotd.admin.stats: true
+  wmotd.admin.reload:
+    description: Reload configs
+    default: op
+  wmotd.admin.preview:
+    description: Preview MOTD as a player
+    default: op
+  wmotd.admin.set:
+    description: Set active template
+    default: op
+  wmotd.admin.stats:
+    description: Show plugin stats
+    default: op
+
+

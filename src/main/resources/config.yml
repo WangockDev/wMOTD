@@ -1,0 +1,89 @@
+# wMOTD configuration
+# Java 17+ required due to Adventure API and Paper 1.21.4 baseline
+
+locale: "ru_RU"  # or "en_US"
+
+minimessage:
+  enabled: true
+  # When disabled, plugin falls back to legacy color codes (including § and #RRGGBB) without MiniMessage tags
+
+placeholders:
+  placeholderapi:
+    enabled: true  # if false, PAPI won't be hooked even if installed
+
+# Weather integration (optional)
+weather:
+  enabled: false
+  provider: "open-meteo"  # only open-meteo (no key) supported by default
+  update-interval-seconds: 600
+  latitude: 55.7558
+  longitude: 37.6173
+
+# Animation and rotation
+rotation:
+  mode: "cycle"   # cycle | random | schedule
+  interval-ticks: 200  # 10s (20tps)
+  secret-motd:
+    enabled: true
+    chance: 0.01  # 1%
+
+# Scheduler
+scheduler:
+  enabled: true
+  # time-based samples (24h format):
+  times:
+    morning: { from: "06:00", to: "11:59", template: "good_morning" }
+    day:     { from: "12:00", to: "17:59", template: "hello_day" }
+    evening: { from: "18:00", to: "22:59", template: "good_evening" }
+    night:   { from: "23:00", to: "05:59", template: "night_owl" }
+  dates:
+    # MM-dd format; examples for holidays
+    "12-31": "new_year_eve"
+    "01-01": "new_year"
+
+# Personalization priorities (higher wins)
+personalization:
+  priority:
+    - uuid
+    - permission
+    - ip
+    - country
+  groups:
+    vip: { permission: "group.vip", template: "vip_greeting" }
+  uuids:
+    # example-uuid: template_name
+  ips:
+    # "127.0.0.1": "local_dev"
+  countries:
+    # "RU": "russian_greeting"
+
+# Server reactive states
+reactive:
+  full-server-template: "server_full"
+  whitelist-template: "whitelist_on"
+  restarting-template: "restarting"
+
+# Icons
+icons:
+  enabled: true
+  folder: "icons"  # inside plugin data folder
+  sync-with-motd: true
+  rotation-interval-ticks: 200
+  map:
+    # template_name: filename.png
+    default: "default.png"
+    good_morning: "sun.png"
+    good_evening: "moon.png"
+
+# TTL cache (milliseconds)
+cache:
+  motd-ttl-ms: 2000
+  icon-ttl-ms: 5000
+
+# Excluded features note: no per-protocol MOTD and no custom sample players (as per prior rejection).
+
+geoip:
+  enabled: false
+  ttl-seconds: 3600
+
+
